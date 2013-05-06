@@ -193,25 +193,8 @@
         } );
       }
       callback();
-    },
-    
-    'control:clock': function( callback ) {
-      if( ! app_windows.clock ) {
-        var view = new _$HtmlView( { url: 'contents/clock.html' } );
-        return view.init( function () {
-          app_windows.clock = new _$Window( {
-            name: "Clock",
-            windowClass: 'accessory',
-            size: [150, 52],
-            onclose: function () { delete app_windows.clock; },
-            view: view
-          } );
-          app_windows.clock.schedule();
-          return callback();
-        } );
-      }
-    callback();
     }
+    
   }
 
   var disco_menu = [
