@@ -166,6 +166,12 @@ body {
     background-color: black;
 }
 
+
+.selected > .title {
+    background-image: url(img/lines.png);
+    background-size: auto 23px;
+}
+
 .window > .title {
     font-family: System;
     position: absolute;
@@ -174,8 +180,6 @@ body {
     right: 1px;
     height: 23px;
     text-align: center;
-    background-image: url(img/lines.png);
-    background-size: auto 23px;
     background-color: white;
     line-height: 18px;
 }

@@ -76,6 +76,7 @@
       el.style.maxWidth = this.maxSize[0] + "px";
     }
 
+    this.select();
   };
 
   _$Window.prototype.deschedule = function () {
@@ -105,6 +106,19 @@
     el.style.webkitTransform = "translate(" + this.position[0] + "px," + this.position[1] + "px)";
     el.style.MozTransform = "translate(" + this.position[0] + "px," + this.position[1] + "px)";
   }
+
+  _$Window.prototype.select = function() {
+    for( var i in _$Window.windows ) {
+      var w = _$.byId( _$Window.windows[ i ].id );
+      if( w ) {
+        if( i == this.id && w.classList.contains( 'window' ) ) {
+          w.classList.add( 'selected' );
+        } else {
+          w.classList.remove( 'selected' );
+        }
+      }
+    }
+  };
 
   function _drag_events( windowId, add ) {
     var tablet = false;
@@ -170,6 +184,7 @@
 
       if( target ) {
         w = _$Window.windows[ target.id ];
+        w.select();
 
         switch( e.target.className ) {
         case 'close':
