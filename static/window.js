@@ -242,13 +242,6 @@
         inFullScreen = document.mozFullScreen;
       }
 
-      console.log( typeof inFullScreen );
-      console.log( inFullScreen );
-      console.log( typeof document.webkitIsFullScreen );
-      console.log( document.webkitIsFullScreen );
-      console.log( typeof document.mozFullScreen );
-      console.log( document.mozFullScreen );
-
       if( 'undefined' != typeof inFullScreen ) {
         if( inFullScreen ) {
           document.webkitCancelFullScreen && document.webkitCancelFullScreen();

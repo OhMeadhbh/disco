@@ -59,7 +59,6 @@
       this.url && ( interior = '<a href="' + this.url + '">' + interior + '</a>' );
       var output = _$Error.template.replace( /{severity}/gm, this.severity );
       output = output.replace( /{text}/gm, interior );
-      console.log( output );
       _$.byId( _$Error.container ).innerHTML = output;
     }
   };
