@@ -77,6 +77,9 @@
     }
 
     this.select();
+
+    this.el = _$.byId( this.id );
+    this.inner = this.el.children[1];
   };
 
   _$Window.prototype.deschedule = function () {

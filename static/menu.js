@@ -193,9 +193,22 @@
         } );
       }
       callback();
+    },
+    'control:clock': function( callback ) {
+      if( ! app_windows.clock ) {
+        app_windows.clock = new _$App( {
+          url: '/contents/app_clock.xml',
+          windowName: 'clock',
+          windowClass: 'accessory',
+          size:[150,52],
+          onclose: function () { delete app_windows.clock; }
+        } );
+        app_windows.clock.do();
+      }
+      callback();
     }
     
-  }
+  };
 
   var disco_menu = [
     {

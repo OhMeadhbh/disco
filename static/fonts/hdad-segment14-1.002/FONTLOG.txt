@@ -1,0 +1,49 @@
+FONTLOG for Segment14
+
+This file provides detailed information on the Segment14 Font Software. 
+This information should be distributed along with the Segment14 fonts 
+and any derivative works.
+
+Basic Font Information
+
+Designed to match the 14-segment LED display of my Stag PROM Programmer. The
+glyphs aren't as clean and straight-lined as the representations you'll see
+elsewhere, because they don't appear that way when you look at the display.
+Over the top of the LEDs themselves, there appears to be a fine hexagonal
+mesh, and that changes the apparent shape of the characters. The strokes are
+all roughly the same width, but they have sections cut out so they fit
+together neatly.
+
+The coverage is limited to basic Latin-1, and not all of that, because 14
+segments simply can't show reasonable representations of all of them.
+
+PANOSE 1.0 information
+Family Type:          4 - Decorative
+Class:                6 - Initials
+Weight:               5 - Book
+Aspect:               9 - Monospaced
+Contrast:             2 - None
+Serif Variant:       11 - Normal Sans
+Treatment:            2 - Standard Solid Fill
+Lining:               2 - None
+Topology:             4 - Multiple Segment
+Range of Characters:  4 - No lower case
+
+ChangeLog
+
+2011-06-03 (Paul Flo Williams) Segment14 Version 1.002
+- clean glitch on grave accent and clean Private dictionary
+  so ots gives a clean bill of health
+
+2011-05-27 (Paul Flo Williams) Segment14 Version 1.001
+- clean up of licence info and metadata
+
+2009-11-01 (Paul Flo Williams) Segment14 Version 1.000
+- Initial release of font "Segment14", version 1.000
+
+Acknowledgements
+
+N: Paul Flo Williams
+E: paul@frixxon.co.uk
+W: http://hisdeedsaredust.com/
+D: Designer - original glyphs

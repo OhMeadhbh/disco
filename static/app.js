@@ -1,6 +1,6 @@
 ( function () {
   function _$App( options ) {
-    _$.populate.call( this, options );
+    options && _$.populate.call( this, options );
     this.script = {};
     this.template = {};
     this.style = {};
@@ -31,6 +31,43 @@
         return complete && complete( null, that );
       } );
     }
+  };
+
+  _$App.prototype.schedule = function ( ) {
+    this.window = new _$Window( {
+      name: this.windowName,
+      view: this,
+      windowClass: this.windowClass?this.windowClass:'window',
+      size: this.size?this.size:undefined,
+      onclose: this.onclose?this.onclose:undefined
+    } );
+    this.window.schedule();
+
+    var style = document.createElement( 'style' );
+    style.setAttribute( 'type', this.style[ this.id ].type );
+    style.textContent = this.style[ this.id ].content.replace( /{id}/gm, this.window.id );
+    this.window.inner.appendChild( style );
+
+    var script = document.createElement( 'script' );
+    script.setAttribute( 'type', this.script[ this.id ].type );
+    script.textContent = this.script[ this.id ].content;
+    this.window.inner.appendChild( script );
+
+    var _f = window[ this.id.replace( /\./gm, '_' ) ];
+    if( _f ) {
+      ( new _f( this.window.id ) ).init();
+    }
+  };
+
+  _$App.prototype.render = function () {
+    return this.template[ this.id ].content;
+  };
+
+  _$App.prototype.do = function () {
+    this.load( function( err, data ) {
+      if( err ) { return; }
+      data.schedule();
+    } );
   }
 
   window._$App = _$App;

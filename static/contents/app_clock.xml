@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<app id="org.meadhbh.clock">
+  <style id="org.meadhbh.clock" type="text/css">
+<![CDATA[
+@font-face {
+    font-family: Digital;
+    src: url(fonts/hdad-segment14-1.002/Segment14.otf);
+}
+
+#{id} > .inner > .container {
+  position: absolute;
+  background-color: white;
+  color: black;
+  top: 25px;
+  bottom: 1px;
+  left: 1px;
+  right: 1px;
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+#{id} .clock {
+    position: absolute;
+    top: 0px;
+    left: 1px;
+    right: 0px;
+
+    color: black;
+
+    text-align: center;
+    font-family: Digital;
+    font-size: 26px;
+    line-height: 26px;
+    text-align: center;
+}
+
+#{id} .date {
+    position: absolute;
+    top: 33px;
+    left: 0px;
+    right: 0px;
+
+    color: black;
+
+    text-align: center;
+    font-family: Digital;
+    font-size: 14px;
+    line-height: 14px;
+    text-align: center;
+}
+]]>
+  </style>
+  <script id="org.meadhbh.clock" type="text/javascript">
+<![CDATA[
+( function () {
+
+  function org_meadhbh_clock( id ) {
+    this.id = id;
+    this.el = document.getElementById(id).children[1];
+    this.container = this.el.children[0];
+    this.clock = this.container.children[0];
+    this.date = this.container.children[1];
+  }
+
+  org_meadhbh_clock.prototype.init = function ( ) {
+    var that = this;
+    this.time_interval = setInterval( function () {
+      that.clock.innerHTML = (new Date()).toTimeString().substr(0,8);
+      that.date.innerHTML = (new Date()).toDateString();
+    }, 1000 );
+  };
+
+  window.org_meadhbh_clock = org_meadhbh_clock;
+} ) ();
+]]>
+  </script>
+  <template type="text/html" id="org.meadhbh.clock">
+<![CDATA[
+  <div class="container">
+    <div class="clock"></div>
+    <div class="date"></div>
+  </div>
+]]>
+  </template>
+</app>
