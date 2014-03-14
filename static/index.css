@@ -1,0 +1,128 @@
+body {
+    background-color: black;
+    overflow: hidden;
+    -webkit-user-select: none;
+}
+
+#menu {
+    position: absolute;
+    z-index: 65535;
+    cursor: default;
+}
+
+#root {
+    position: absolute;
+    -webkit-user-select: none;
+    overflow: hidden;
+}
+
+.windowframe {
+    position: absolute;
+    float: left;
+}
+
+.windowframe > .windowtitle {
+    position: absolute;
+    -webkit-user-select: none;
+    cursor: default;
+}
+
+.windowframe > .windowtitle > .windowclose  {
+    position: absolute;
+    background-size: contain;
+    cursor: default;
+}
+
+.windowframe > .windowtitle > .windowname  {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    cursor: default;
+}
+
+.icon {
+    height: 88px;
+    width: 88px;
+    position: absolute;
+    z-index: 0;
+}
+
+.icon > .content {
+    position: absolute;
+    height: 64px;
+    width: 64px;
+    top: 2px;
+    left: 12px;
+    background-repeat: no-repeat;
+    background-color: center;
+    background-size: cover;
+}
+
+.icon.selected > .content {
+    -webkit-filter: invert( 100% );
+}
+
+.icon > .iconcaption {
+    text-align: center;
+    position: absolute;
+    width: 88px;
+    top: 71px;
+    left: 0px;
+}
+
+.icon > .iconcaption > span {
+    padding: 0px 4px 0px 4px;
+    background-color: white;
+    color: black;
+    font-family: Helvetica;
+    font-size: 9pt;
+}
+
+.dropdown {
+    position: absolute;
+    background-color: white;
+    border: 1px solid black;
+    z-index: 65535;
+    padding: 0px;
+    box-shadow: 3px 3px black;
+}
+
+.dropdown > .content {
+    border-spacing: 0px;
+}
+
+.dropdown .drophandle {
+    margin: 0px;
+    height: 24px;
+    background-color: white;
+    color: black;
+}
+
+.dropdown .drophandle > .dropimg {
+    padding-right: 4px;
+}
+
+.dropdown .drophandle > .dropimg > img {
+    position: relative;
+    top: 3px;
+    left: 1px;
+    height: 16px;
+    width: 16px;
+}
+
+.dropdown .drophandle > .droptext {
+    padding-top: 2px;
+    padding-right: 6px;
+}
+
+.dropdown .drophandle hr {
+    border-top: 1px dotted black;
+}
+
+.dropdown .drophandle > .dropkey {
+}
+
+.drophandle:hover {
+    -webkit-filter: invert(100%);
+}
+
+::selection { color: white;  background-color: black; } 

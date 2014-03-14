@@ -1,0 +1,30 @@
+[
+  {
+    "id": "_$Desktop",
+    "script": "/app/desktop/desktop.js"
+  },
+  {
+    "id": "_$Clock",
+    "script": "/app/clock/clock.js"
+  },
+  {
+    "id": "_$Calculator",
+    "script": "/app/calculator/calculator.js"
+  },
+  {
+    "id": "_$NotePad",
+    "script": "/app/notepad/notepad.js"
+  },
+  {
+    "id": "_$Puzzle",
+    "script": "/app/puzzle/puzzle.js"
+  },
+  {
+    "id": "_$HTMLReader",
+    "script": "/app/htmlreader/htmlreader.js"
+  },
+  {
+    "id": "_$IMGViewer",
+    "script": "/app/imgviewer/imgviewer.js"
+  }
+]

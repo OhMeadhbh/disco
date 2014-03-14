@@ -1,0 +1,79 @@
+<textarea class="contents"></textarea>
+<div class="corner">&nbsp;</div>
+<div class="bottom">&nbsp;</div>
+<div class="page">&nbsp;</div>
+<style type="text/css">
+@font-face {
+    font-family: Espy;
+    src: url(/app/notepad/EspySansRevivedTwelve-Regul.ttf);
+}
+
+#window_%id% {
+   border-radius: 0px;
+}
+
+#window_%id% > .windowtitle {
+   border-radius: 0px;
+}
+
+#window_%id%_content > .contents {
+    position: absolute;
+    top: 21px;
+    bottom: 2px;
+    left: 0px;
+    right: 0px;
+    width: 222px;
+    height: 198px;
+
+    background-color: white;
+    color: black;
+
+    padding: 6px;
+    margin: 0px;
+    font-family: Espy;
+    font-size: 12px;
+    overflow: auto;
+
+    border: none;
+    resize: none;
+    outline: none;
+}
+
+#window_%id%_content > .corner {
+    overflow: hidden;
+    position: absolute;
+    bottom: 0px;
+    left: 1px;
+    height: 24px;
+    width: 24px;
+    
+    background-image: url(/app/notepad/notecorner.png);
+}
+
+#window_%id%_content > .bottom {
+    overflow: hidden;
+    position: absolute;
+    bottom: 0px;
+    left: 25px;
+    right: 1px;
+    height: 5px;
+    
+    background-image: url(/app/notepad/notebottom.png);
+}
+
+#window_%id%_content > .page {
+    position: absolute;
+    bottom: 5px;
+    left: 25px;
+    height: 19px;
+    right: 1px;
+    
+    background-color: white;
+    color: black;
+    font-family: Espy;
+    font-size: 12px;
+    line-height: 19px;
+    text-align: center;
+    padding-right: 25px;
+}
+</style>
