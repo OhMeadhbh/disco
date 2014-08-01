@@ -1,5 +1,5 @@
 CORVER = 0.0.13
-MODULES = sn-props sn-core connect
+MODULES = sn-props sn-core connect@2.24.2
 DISCO = ./static/js/disco-core.js ./static/js/prefs.js ./static/js/error.js ./static/js/endpoint.js \
 	./static/js/collectable.js ./static/js/positionable.js ./static/js/selectable.js \
 	./static/js/style.js ./static/js/icon.js ./static/js/window.js ./static/js/menu.js ./static/js/app.js
