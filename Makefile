@@ -20,6 +20,7 @@ clean:
 
 ./build : 
 	mkdir ./build
+	if [ ! -d ./static/fonts ]; then mkdir ./static/fonts; fi
 
 ./build/v$(CORVER).tar.gz : ./build
 	(cd build; wget https://github.com/smithee-us/sn-core/archive/v$(CORVER).tar.gz)
