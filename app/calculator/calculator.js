@@ -106,7 +106,7 @@
     if( _$Calculator.window ) {
       return _$Calculator.window.select();
     }
-    _$Endpoint.get( '/app/calculator/calculator.html', function( err, data ) {
+    _$Endpoint.get( 'app/calculator/calculator.html', function( err, data ) {
       if( err ) {
         console.log( "Error: " + err.toString() );
         return;

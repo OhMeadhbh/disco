@@ -13,7 +13,7 @@
     if( _$Clock.window ) {
       return _$Clock.window.select();
     }
-    _$Endpoint.get( '/app/clock/clock.html', function( err, data ) {
+    _$Endpoint.get( 'app/clock/clock.html', function( err, data ) {
       if( err ) {
         console.log( "Error: " + err.toString() );
         return;

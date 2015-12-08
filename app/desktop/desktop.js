@@ -137,7 +137,7 @@
     }
   };
 
-  _$Endpoint.get( '/desktop.json', function( err, data ) {
+  _$Endpoint.get( 'desktop.json', function( err, data ) {
     if( err ) { return console.log( err ); }
     _$Endpoint.model = ( data ? data : {} );
     var posdata = localStorage.getItem( '_$Desktop_position' );
