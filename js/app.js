@@ -41,7 +41,7 @@ _$App.message = function( id, msg ) {
   instance.message( msg );
 };
 _$.ready( function () {
-  _$Endpoint.get( '/app/registry.json', function( err, data ) {
+  _$Endpoint.get( 'app/registry.json', function( err, data ) {
     if( ! err ) {
       data && data._$each && data._$each( function( e ) {
         if( ! e.id ) { return };

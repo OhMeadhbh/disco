@@ -371,7 +371,6 @@ _$.ready( function () {
 
 // icon.js
 
-//_$construct( '_$Icon', { img: "/img/logo.png", caption: "Disco!", position: "absolute", overflow: "hidden", corner: 0 } );
 _$construct( '_$Icon', { img: "img/logo.png", caption: "Disco!", overflow: "hidden", corner: 0 } );
 _$Icon.prototype._$mixin( _private.collectable );
 _$Icon.prototype._$mixin( _private.positionable );
@@ -696,16 +695,16 @@ _$MenuBar.menubars = {};
 _$MenuBar.els = {};
 _$MenuBar.id = 0;
 _$MenuBar.defaults = {
-  'menuleft' : new _$MenuBar( { items: [ { img: '/img/logo.png', items: [
-    { text: 'About Discovery...', handler: function () { _$App.launch( '_$IMGViewer', '/img/disco.png' ); } },
+  'menuleft' : new _$MenuBar( { items: [ { img: 'img/logo.png', items: [
+    { text: 'About Discovery...', handler: function () { _$App.launch( '_$IMGViewer', 'img/disco.png' ); } },
     { separator: true },
-    { text: 'Clock', img: "/app/clock/icon_16.png", handler: function () { _$App.launch( '_$Clock' ); } },
-    { text: 'Calculator', img: "/app/calculator/icon_16.png", handler: function () { _$App.launch( '_$Calculator' ); } },
-    { text: 'Note Pad', img: "/app/notepad/icon_16.png", handler: function () { _$App.launch( '_$NotePad' ); } },
-    { text: 'Puzzle', img: "/app/puzzle/icon_16.png", handler: function () { _$App.launch( '_$Puzzle' ); } }
+    { text: 'Clock', img: "app/clock/icon_16.png", handler: function () { _$App.launch( '_$Clock' ); } },
+    { text: 'Calculator', img: "app/calculator/icon_16.png", handler: function () { _$App.launch( '_$Calculator' ); } },
+    { text: 'Note Pad', img: "app/notepad/icon_16.png", handler: function () { _$App.launch( '_$NotePad' ); } },
+    { text: 'Puzzle', img: "app/puzzle/icon_16.png", handler: function () { _$App.launch( '_$Puzzle' ); } }
   ] } ] } ),
-  'menudesktop': new _$MenuBar( { items: [ { img: '/app/desktop/icon_16.png' } ], corner: 1 } ),
-  'menuright': new _$MenuBar( { items: [ { img: '/img/help.png', handler: function () { _$App.launch('_$HTMLReader', '/contents/help.html'); } }, { img: '/img/fullscreen.png', handler: _$Window.toggleFullScreen } ] } )
+  'menudesktop': new _$MenuBar( { items: [ { img: 'app/desktop/icon_16.png' } ], corner: 1 } ),
+  'menuright': new _$MenuBar( { items: [ { img: 'img/help.png', handler: function () { _$App.launch('_$HTMLReader', 'contents/help.html'); } }, { img: 'img/fullscreen.png', handler: _$Window.toggleFullScreen } ] } )
 };
 
 _$.ready( function () {
@@ -760,7 +759,7 @@ _$App.message = function( id, msg ) {
   instance.message( msg );
 };
 _$.ready( function () {
-  _$Endpoint.get( '/app/registry.json', function( err, data ) {
+  _$Endpoint.get( 'app/registry.json', function( err, data ) {
     if( ! err ) {
       data && data._$each && data._$each( function( e ) {
         if( ! e.id ) { return };

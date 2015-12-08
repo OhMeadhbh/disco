@@ -89,16 +89,16 @@ _$MenuBar.menubars = {};
 _$MenuBar.els = {};
 _$MenuBar.id = 0;
 _$MenuBar.defaults = {
-  'menuleft' : new _$MenuBar( { items: [ { img: '/img/logo.png', items: [
-    { text: 'About Discovery...', handler: function () { _$App.launch( '_$IMGViewer', '/img/disco.png' ); } },
+  'menuleft' : new _$MenuBar( { items: [ { img: 'img/logo.png', items: [
+    { text: 'About Discovery...', handler: function () { _$App.launch( '_$IMGViewer', 'img/disco.png' ); } },
     { separator: true },
-    { text: 'Clock', img: "/app/clock/icon_16.png", handler: function () { _$App.launch( '_$Clock' ); } },
-    { text: 'Calculator', img: "/app/calculator/icon_16.png", handler: function () { _$App.launch( '_$Calculator' ); } },
-    { text: 'Note Pad', img: "/app/notepad/icon_16.png", handler: function () { _$App.launch( '_$NotePad' ); } },
-    { text: 'Puzzle', img: "/app/puzzle/icon_16.png", handler: function () { _$App.launch( '_$Puzzle' ); } }
+    { text: 'Clock', img: "app/clock/icon_16.png", handler: function () { _$App.launch( '_$Clock' ); } },
+    { text: 'Calculator', img: "app/calculator/icon_16.png", handler: function () { _$App.launch( '_$Calculator' ); } },
+    { text: 'Note Pad', img: "app/notepad/icon_16.png", handler: function () { _$App.launch( '_$NotePad' ); } },
+    { text: 'Puzzle', img: "app/puzzle/icon_16.png", handler: function () { _$App.launch( '_$Puzzle' ); } }
   ] } ] } ),
-  'menudesktop': new _$MenuBar( { items: [ { img: '/app/desktop/icon_16.png' } ], corner: 1 } ),
-  'menuright': new _$MenuBar( { items: [ { img: '/img/help.png', handler: function () { _$App.launch('_$HTMLReader', '/contents/help.html'); } }, { img: '/img/fullscreen.png', handler: _$Window.toggleFullScreen } ] } )
+  'menudesktop': new _$MenuBar( { items: [ { img: 'app/desktop/icon_16.png' } ], corner: 1 } ),
+  'menuright': new _$MenuBar( { items: [ { img: 'img/help.png', handler: function () { _$App.launch('_$HTMLReader', 'contents/help.html'); } }, { img: 'img/fullscreen.png', handler: _$Window.toggleFullScreen } ] } )
 };
 
 _$.ready( function () {
