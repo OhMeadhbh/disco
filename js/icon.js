@@ -1,7 +1,7 @@
 // icon.js
 
 //_$construct( '_$Icon', { img: "/img/logo.png", caption: "Disco!", position: "absolute", overflow: "hidden", corner: 0 } );
-_$construct( '_$Icon', { img: "/img/logo.png", caption: "Disco!", overflow: "hidden", corner: 0 } );
+_$construct( '_$Icon', { img: "img/logo.png", caption: "Disco!", overflow: "hidden", corner: 0 } );
 _$Icon.prototype._$mixin( _private.collectable );
 _$Icon.prototype._$mixin( _private.positionable );
 _$Icon.prototype._$mixin( _private.selectable );
