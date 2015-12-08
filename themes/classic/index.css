@@ -1,11 +1,11 @@
 @font-face {
     font-family: System;
-    src:url(fonts/GranaPadano.ttf);
+    src:url(../../fonts/GranaPadano.ttf);
 }
 
 @font-face {
     font-family: Caption;
-    src:url(fonts/EspySansRevivedTwelve-Regul.ttf);
+    src:url(../../fonts/EspySansRevivedTwelve-Regul.ttf);
 }
 
 body {
