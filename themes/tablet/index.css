@@ -1,11 +1,11 @@
 @font-face {
     font-family: System;
-    src:url(/fonts/GranaPadano.ttf);
+    src:url(fonts/GranaPadano.ttf);
 }
 
 @font-face {
     font-family: Caption;
-    src:url(/fonts/EspySansRevivedTwelve-Regul.ttf);
+    src:url(fonts/EspySansRevivedTwelve-Regul.ttf);
 }
 
 body {
@@ -84,7 +84,7 @@ body {
     left: 0px;
     right: 0px;
     bottom: 0px;
-    background-image: url(/themes/classic/background.png);
+    background-image: url(themes/classic/background.png);
     border-bottom-left-radius: 12px;
     border-bottom-right-radius: 12px;
 }
@@ -114,11 +114,11 @@ body {
     left: 5px;
     height: 19px;
     width: 19px;
-    background-image: url(/themes/classic/close.png);
+    background-image: url(themes/classic/close.png);
 }
 
 .selected > .windowtitle > .windowclose:active {
-    background-image: url(/themes/classic/closeactive.png);
+    background-image: url(themes/classic/closeactive.png);
 }
 
 .windowframe > .windowtitle > .windowname {
@@ -166,7 +166,7 @@ body {
 }
 
 .selected:not( .accessory ) > .windowtitle {
-    background-image: url(/themes/classic/lines.png);
+    background-image: url(themes/classic/lines.png);
     background-size: 32px 19px;
 }
 
@@ -176,7 +176,7 @@ body {
     right: 5px;
     height: 19px;
     width: 19px;
-    background-image: url(/themes/classic/max.png);
+    background-image: url(themes/classic/max.png);
     background-size: contain;
     cursor: default;
 }
@@ -191,39 +191,39 @@ body {
 }
 
 ::-webkit-scrollbar-track-piece:vertical:decrement {
-    background-image:url(/themes/classic/trackvert.png)
+    background-image:url(themes/classic/trackvert.png)
 }
 
 ::-webkit-scrollbar-track-piece:vertical:increment {
-    background-image:url(/themes/classic/trackvert.png)
+    background-image:url(themes/classic/trackvert.png)
 }
 
 ::-webkit-scrollbar-button:vertical:decrement {
-    background-image:url(/themes/classic/scrollup.png)
+    background-image:url(themes/classic/scrollup.png)
 }
 
 ::-webkit-scrollbar-button:vertical:increment {
-    background-image:url(/themes/classic/scrolldown.png)
+    background-image:url(themes/classic/scrolldown.png)
 }
 
 ::-webkit-scrollbar-track-piece:horizontal:decrement {
-    background-image:url(/themes/classic/trackhoriz.png)
+    background-image:url(themes/classic/trackhoriz.png)
 }
 
 ::-webkit-scrollbar-track-piece:horizontal:increment {
-    background-image:url(/themes/classic/trackhoriz.png)
+    background-image:url(themes/classic/trackhoriz.png)
 }
 
 ::-webkit-scrollbar-button:horizontal:decrement {
-    background-image:url(/themes/classic/scrollleft.png)
+    background-image:url(themes/classic/scrollleft.png)
 }
 
 ::-webkit-scrollbar-button:horizontal:increment {
-    background-image:url(/themes/classic/scrollright.png)
+    background-image:url(themes/classic/scrollright.png)
 }
 
 ::-webkit-resizer {
-    background-image:url(/themes/classic/resize.png)
+    background-image:url(themes/classic/resize.png)
 }
 
 ::-webkit-scrollbar-thumb {
