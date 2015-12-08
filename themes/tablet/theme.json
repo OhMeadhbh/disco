@@ -1,0 +1,7 @@
+{
+  "css": "index.css",
+  "preload": [
+    "background.png", "closeactive.png", "close.png", "max.png", "lines.png", "scrolldown.png", "scrollleft.png",
+    "resize.png", "scrollup.png", "scrollright.png", "trackhoriz.png", "trackvert.png", "circles.gif"
+  ]
+}

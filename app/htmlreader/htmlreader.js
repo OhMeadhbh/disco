@@ -1,4 +1,19 @@
 ( function () {
+
+  function _getScriptsFromData( data ) {
+    var output = [ undefined, [] ];
+    var doc = document.implementation.createHTMLDocument();
+    var body = doc.getElementsByTagName('body')[0];
+    body.innerHTML = data;
+    var scripts = body.getElementsByTagName('script');
+    scripts._$each( function( e ) {
+      e && e.getAttribute && output[1].push( e.getAttribute( 'src' ) );
+      e && body.removeChild( e );
+    } );
+    output[0] = body.innerHTML;
+    return output;
+  }
+
   var menu = [
     {
       text: "File",
@@ -78,6 +93,11 @@
     }.bind( this ) );
   };
   _$HTMLReader.prototype.openURL = function( url ) {
+    var options;
+    if( 'object' == typeof url ) {
+      options = url;
+      url = options.url;
+    }
     if( _$HTMLReader.windows[ url ] ) {
       _$HTMLReader.windows[ url ].select();
     } else {
@@ -90,12 +110,25 @@
           console.log( "Error: No Data Received" );
           return;
         }
-        var current = new _$Window( { overflow: 'scroll', resize: 'both', title: "HTML Reader", content: data, app: '_$HTMLReader' } );
+
+        var items = _getScriptsFromData( data );
+
+        var windowprops = { overflow: 'scroll', resize: 'both', title: "HTML Reader", content: items[0], app: '_$HTMLReader' };
+        options && [ 'height', 'width', 'x', 'y', 'title' ]._$each( function ( e, i ) {
+          if( 'undefined' != typeof options[ e ] ) { windowprops[ e ] = options[ e ]; }
+        } );
+        var current = new _$Window( windowprops );
         current._deschedule = function () {
           delete _$HTMLReader.windows[ url ];
         };
         _$HTMLReader.windows[ url ] = current;
         current.schedule();
+        items && items[1] && items[1]._$each && items[1]._$each( function( e ) {
+          var a = document.createElement( 'script' );
+          a.setAttribute( 'type', 'text/javascript' );
+          a.setAttribute( 'src', e );
+          current.elc.appendChild( a );
+        } );
         current.select();
       }.bind( this ) );
     }

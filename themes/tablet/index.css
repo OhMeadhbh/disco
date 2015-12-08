@@ -17,7 +17,7 @@ body {
     top: 0px;
     left: 0px;
     right: 0px;
-    height: 20px;
+    height: 41px;
     background-color: white;
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
@@ -80,7 +80,7 @@ body {
 }
 
 #root {
-    top: 21px;
+    top: 42px;
     left: 0px;
     right: 0px;
     bottom: 0px;
@@ -91,7 +91,7 @@ body {
 
 .windowframe {
     background-color: black;
-    padding: 21px 1px 1px 1px;
+    padding: 42px 1px 1px 1px;
 }
 
 .windowframe > .windowtitle {
