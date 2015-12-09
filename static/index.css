@@ -73,8 +73,9 @@ body {
     padding: 0px 4px 0px 4px;
     background-color: white;
     color: black;
-    font-family: Helvetica;
-    font-size: 9pt;
+    font-family: Caption;
+    font-size: 12px;
+    padding-top: 2px;
 }
 
 .dropdown {

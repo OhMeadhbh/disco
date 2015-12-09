@@ -1,0 +1,19 @@
+{
+  "Remote Files": {
+    "type": "http",
+    "icon": { "img": "img/hdisk.png", "caption": "Remote Files", "x": 8, "y": 16, "corner": 1 },
+    "contents": [
+      { "name": "help.html", "path": "contents/help.html", "type": "text/html", "img": "img/document_html.png" },
+      { "name": "intro.html", "path": "contents/intro.html", "type": "text/html", "img": "img/document_html.png" },
+      { "name": "about.html", "path": "contents/about.html", "type": "text/html", "img": "img/document_html.png" },
+      { "name": "history.html", "path": "contents/history.html", "type": "text/html", "img": "img/document_html.png" },
+      { "name": "contact.html", "path": "contents/contact.html", "type": "text/html", "img": "img/document_html.png" }
+    ]
+  },
+  "Trash": {
+    "type": "trash",
+    "icon": { "img": "img/trash.png", "caption": "Trash", "x": 8, "y": 16, "corner": 2 },
+    "contents": [
+    ]
+  }
+}

@@ -21,7 +21,7 @@
     if( _$NotePad.window ) {
       return _$NotePad.window.select();
     }
-    _$Endpoint.get( '/app/notepad/notepad.html', function( err, data ) {
+    _$Endpoint.get( 'app/notepad/notepad.html', function( err, data ) {
       if( err ) {
         console.log( "Error: " + err.toString() );
         return;

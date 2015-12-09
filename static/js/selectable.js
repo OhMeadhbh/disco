@@ -16,6 +16,7 @@ _private.selectable = {
       var mouse_origin, body_height, differential;
 
       target.addEventListener( 'mousedown', _mousedown_title );
+      target.addEventListener( 'touchstart', _mousedown_title );
 
       selecting.ell && selecting.ell.addEventListener( 'mousedown', _mousedown_close );
 
@@ -42,8 +43,16 @@ _private.selectable = {
       }
 
       function _mousedown_title( event ) {
+        if( "touchstart" == event.type ) {
+          event.stopPropagation();
+          event.preventDefault();
+          event = event.touches.item(0);
+        }
+
         selecting.parent.addEventListener( 'mouseup', _mouseup );
+        selecting.parent.addEventListener( 'touchend', _mouseup );
         selecting.parent.addEventListener( 'mousemove', _mousemove );
+        selecting.parent.addEventListener( 'touchmove', _mousemove );
         selecting.parent.addEventListener( 'mouseover', _mouseover );
 
         mouse_origin = { pageX: event.pageX, pageY: event.pageY };
@@ -52,6 +61,10 @@ _private.selectable = {
       }
 
       function _mousemove ( event ) {
+        if( "touchmove" == event.type ) {
+          event = event.touches.item(0);
+        }
+
         var dx = event.pageX - mouse_origin.pageX;
         var dy = event.pageY - mouse_origin.pageY;
         var d = Math.sqrt( dx * dx + dy * dy );
@@ -100,7 +113,9 @@ _private.selectable = {
           }
         }
         selecting.parent.removeEventListener( 'mouseup', _mouseup );
+        selecting.parent.removeEventListener( 'touchend', _mouseup );
         selecting.parent.removeEventListener( 'mousemove', _mousemove );
+        selecting.parent.removeEventListener( 'touchmove', _mousemove );
         selecting.parent.removeEventListener( 'mouseover', _mouseover );
       }
 

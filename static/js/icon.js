@@ -1,6 +1,6 @@
 // icon.js
 
-_$construct( '_$Icon', { img: "/img/logo.png", caption: "Disco!", position: "absolute", overflow: "hidden", corner: 0 } );
+_$construct( '_$Icon', { img: "img/logo.png", caption: "Disco!", overflow: "hidden", corner: 0 } );
 _$Icon.prototype._$mixin( _private.collectable );
 _$Icon.prototype._$mixin( _private.positionable );
 _$Icon.prototype._$mixin( _private.selectable );
@@ -88,7 +88,33 @@ _$Icon.prototype.endDrag = function () {
       }
     }
   }.bind( this ) );
+
+  this._endDrag && this._endDrag();
 };
+  _$Icon.prototype._moveToRoot = function () {
+    console.log( "moving icon " + this.id + " to root" );
+    var xy = [this.x, this.y];
+    var current = this.parent;
+    do {
+      if( current.style.webkitTransform ) {
+        var t = current.style.webkitTransform;
+        var items = t.substring(10, t.length -1 ).split(", ");
+        xy[0] += Number( items[0].substring(0, items[0].length -2) );
+        xy[1] += Number( items[1].substring(0, items[1].length -2) );
+      } else {
+        xy[0] += current.offsetLeft;
+        xy[1] += current.offsetTop;
+      }
+
+      current = current.parentElement;
+    } while( current != document.body );
+
+    
+
+  };
+  _$Icon.prototype._moveFromRoot = function () {
+    console.log( "moving icon " + this.id + " from root" );
+  };
 _$.ready( function () {
   _$Icon.template = _$.byId( 'template_icon' ).innerHTML;
   disco_counter && disco_counter();

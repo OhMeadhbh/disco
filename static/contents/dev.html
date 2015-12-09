@@ -1,0 +1,147 @@
+<style type="text/css">
+  #container {
+    font-family: Helvetica;
+    position: relative;
+  }
+
+  table {
+    margin-left: 40px;
+    width: 240px;
+  }
+
+  table tr td {
+    border: solid 1px grey;
+    padding-left: 4px;
+  }
+
+  table tr td:first-child {
+    width: 40px;
+    text-align: center;
+    padding-top: 2px;
+    padding-bottom: 0px;
+  }
+
+  #container .menu {
+    position: absolute;
+    cursor: default;
+    top: 0px;
+    left: 4px;
+    width: 200px;
+    border-right: 2px dotted black;
+    overflow: hidden;
+    resize: none;
+  }
+
+  #container #container_content {
+    position: absolute;
+    top: 0px;
+    left: 202px;
+    margin: 0px 8px 0px 8px;
+  }
+
+</style>
+<div id="container">
+  <div class="menu">
+    <dl>
+      <dt data-source="__0">0. Overview</dt>
+      <dd>
+        <dl>
+          <dt data-source="__0_0">0.0. Disclaimers</dt>
+        </dl>
+      </dd>
+      <dt data-source="__1">1. Read This First</dt>
+      <dt data-source="__2">2. Let's Build an App</dt>
+      <dt data-source="__3">3. Disco Reference</dt>
+      <dt data-source="__4">4. Screed</dt>
+    </dl>
+  </div>
+  <div id="container_content">&nbsp</div>
+
+  <template id="__0">
+    <h3>Overview</h3>
+
+    <p>
+      Rather than giving you a list of API calls
+      you could have figured out by glancing at the code, I'm going to talk
+      about what I was thinking when I made the APIs and how to build a
+      sample application.
+    </p>
+  </template>
+
+  <template id="__0_0">
+    <h3>Disclaimers</h3>
+
+    <h4>Everything You Know is Wrong</h4>
+
+    <p>
+      Everything you read here may be wrong. Sucktastic documentation is
+      a characteristic of open source projects. But I'm going to make an
+      effort to keep these docs somewhat up to date. I hate it when
+      developers respond to my queries by saying "the source code is
+      self-documenting (you idiot)" which is a total crock of stuff we
+      can't really mention in software documentation.
+    </p>
+
+    <p>
+      If something in this document doesn't make sense, get some coffee and see
+      if it makes sense later. If it still doesn't make sense (you're going to
+      hate this) take a look at the source code. It's possible I messed up or
+      just haven't updated the docs. You're a skilled coding ninja, you might
+      just spot the error. If you still can't figure it out, feel free to
+      drop me a line and I'll try to answer your question as best I can.
+    </p>
+
+    <p>
+      <button onclick="_$App.launch( '_$HTMLReader', '/contents/contact.html');">Click here to open the contact page</button>
+    </p>
+
+    <h4>Prepare to be Sadly Disappointed</h4>
+
+    <p>
+      You know that verbage in end user licenses that says "no representations
+      are made about the suitability of this softare for any purpose" ?? I've
+      always sort of wondered what that means since softare companies spend
+      millions (if not billions) of dollars every year trying to convince you
+      their brand of bits is the niftiest thing since sliced bread.
+    </p>
+
+    <p>
+      I know, I know... It's boilerplate legalese crafted to prevent nuisance
+      law suits when someone tries to say "You didn't tell me your software wouldn't
+      make me waffles!" when it's clear all software is suitable for making crepes.
+      This software doesn't make waffles. It actualy doesn't even make crepes. That is,
+      unless you add a crepe-making application yourself, in which case it's not
+      my fault your crepe-making app doesn't work, so buzz off.
+    </p>
+
+    <p>
+      No... there's no warranty on this software or it's documentation. If it does
+      something useful, it's probably a complete accident and the result of a bug
+      that will be removed in the next version of the code. And not only are no
+      representations made about the suitability of this software (or it's
+      documentation) for any particular purpose, you will be sadly disappointed if
+      if you expect it to even work.
+    </p>
+
+    <p>
+      That being said, the way it doesn't work is the niftiest thing since bread
+      started coming sliced. If this software happens to randomly make you a waffle,
+      please let me know about it.
+    </p>
+  </template>
+
+  <template id="__1">
+  </template>
+
+  <template id="__2">
+  </template>
+
+  <template id="__3">
+  </template>
+
+  <template id="__4">
+    <h3>The Jeremiad of the Classical Developer</h3>
+
+  </template>
+</div>
+<script type="text/javascript" src="/contents/dev.js"></script>

@@ -24,7 +24,7 @@
     if( _$Puzzle.window ) {
       return _$Puzzle.window.select();
     }
-    _$Endpoint.get( '/app/puzzle/puzzle.html', function( err, data ) {
+    _$Endpoint.get( 'app/puzzle/puzzle.html', function( err, data ) {
       if( err ) {
         console.log( "Error: " + err.toString() );
         return;

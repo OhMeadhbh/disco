@@ -72,8 +72,9 @@ _$Window.prototype._select = function () {
     }
   }.bind( this ) );
   this.bringToTop();
-  var target = _$App.running[ this.app ].menu ? _$App.running[ this.app ].menu : _$App.running[ '_$Desktop' ].menu;
-  this.app && _$MenuBar.render( _$MenuBar.collection[ target.id ] );
+  var targetName = this.app ? this.app : '_$Desktop';
+  var targetMenu = _$App.running[ targetName ].menu ? _$App.running[ targetName ].menu : _$App.running[ '_$Desktop' ].menu;
+  _$MenuBar.render( _$MenuBar.collection[ targetMenu.id ] );
 };
 _$Window.prototype.bringToTop = function () {
   _$Window.collection._$each( function( e, i ) {
